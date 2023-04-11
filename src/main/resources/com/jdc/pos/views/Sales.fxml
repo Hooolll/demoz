@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="content-view" stylesheets="@style/application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.pos.views.Sales">
+   <children>
+      <HBox styleClass="content-view-header">
+         <children>
+            <Label fx:id="title" styleClass="title" text="Добавление пользователя" />
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="423.0" prefWidth="1180.0">
+         <children>
+            <VBox prefHeight="697.0" prefWidth="1180.0">
+               <children>
+                  <TextField fx:id="nameAdd" prefHeight="215.0" prefWidth="1076.0" promptText="Логин" stylesheets="@../style.css">
+                     <font>
+                        <Font name="MS Outlook" size="49.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="passAdd" prefHeight="246.0" prefWidth="1180.0" promptText="Пароль">
+                     <font>
+                        <Font size="52.0" />
+                     </font>
+                  </PasswordField>
+                  <HBox prefHeight="248.0" prefWidth="1180.0" stylesheets="@style/application.css">
+                     <children>
+                        <JFXButton fx:id="addUser" prefHeight="248.0" prefWidth="1199.0" text="Добавить">
+                           <font>
+                              <Font size="51.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="cancelUser" prefHeight="248.0" prefWidth="1151.0" text="Отмена">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
